@@ -31,7 +31,7 @@ export const overlayClose = overlay => {
     }
   }
 
-  console.log('click overlay')
+  // console.log('click overlay')
 }
 
 export const scrollHeader = () => {
@@ -130,6 +130,8 @@ export const smoothScroll = parent => {
   let offset = 0
   let call
   let target
+  const wrapper = document.getElementsByTagName('body')[0]
+
   function scroll() {
     if (offset - document.documentElement.scrollTop > 0) {
       document.documentElement.scrollTop += 10
@@ -145,8 +147,30 @@ export const smoothScroll = parent => {
   //CallBack Function
   function reply_click(e) {
     e.preventDefault()
-    call = setInterval(scroll, 10)
+    call = setInterval(scroll, 100)
     target = e.srcElement.dataset.scroll
     offset = document.getElementById(target).offsetTop
   }
+}
+
+export const scrollUpDown = () => {
+  let last_known_scroll_position = 0
+  let ticking = false
+
+  function doSomething(scroll_pos) {
+    // Do something with the scroll position
+  }
+
+  window.addEventListener('scroll', function(e) {
+    last_known_scroll_position = window.scrollY
+
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        doSomething(last_known_scroll_position)
+        ticking = false
+      })
+
+      ticking = true
+    }
+  })
 }

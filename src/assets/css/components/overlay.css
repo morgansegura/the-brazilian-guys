@@ -1,6 +1,6 @@
 #overlay__results {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 .overlay {
   width: 100%;
@@ -20,7 +20,7 @@
     visibility: visible;
     z-index: 1001;
     transition: opacity 0.4s ease-in;
-    background-color: color(white a(95%));
+    /* background-color: color(white a(95%)); */
   }
   &--not-visible,
   .mobile-nav--is-closed & {

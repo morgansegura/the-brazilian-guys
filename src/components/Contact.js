@@ -3,10 +3,7 @@ import React, { Component } from 'react'
 export default class Contact extends Component {
   render() {
     return (
-      <section
-        id="contact-us"
-        className="contact__form__container vh-100 bg--gold c--black d-flex align-items-center justify-content-center"
-      >
+      <section id="contact-us" className="contact__form__container">
         <div className="container container--md">
           <form
             name="contact"

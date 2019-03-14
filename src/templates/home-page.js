@@ -9,9 +9,9 @@ const HomePageTemplate = ({ data: { prismicHomepage }, logo }) => {
   return (
     <React.Fragment>
       <Hero logo={logo} data={prismicHomepage.data.Hero} />
-      <Instanode />
       <About />
       <FoodMenuTeaser />
+      <Instanode />
       <Contact />
     </React.Fragment>
   )

@@ -1,6 +1,21 @@
 .contact__form__container {
-  &::after {
+  border-top: 60px solid google-color(amber, 300);
+  padding-top: 90px;
+  padding-bottom: 120px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  /* height: 100vh; */
+  background: white;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  color: black;
+  background: linear-gradient(transparent, white);
+
+  &::before {
     position: absolute;
+    z-index: -1;
     overflow: hidden;
     top: 0;
     left: 0;
@@ -9,8 +24,10 @@
     height: 100%;
     background-size: cover;
     background-image: url('images/triangles.svg');
+    background-repeat: repeat;
+    /* transform: rotate(180deg); */
     background-attachment: fixed;
-    opacity: 0.2;
+    opacity: 0.1;
   }
   & input:-internal-autofill-previewed,
   & input:-internal-autofill-selected,
@@ -23,6 +40,8 @@
 }
 
 .contact__form {
+  position: relative;
+  z-index: 100;
   width: 100%;
   &__inner {
     border: 1px solid color(black a(20%));
@@ -74,14 +93,14 @@
     display: block;
     width: 100%;
     padding: 15px;
-    background-color: google-color(amber, 300);
+    background-color: color(white a(50%));
     border: 1px solid color(black a(20%));
     transition: all 0.3s ease-out;
     border-radius: 3px;
 
     &:focus {
       /* border-color: color(black a(10%)); */
-      background-color: google-color(amber, 100);
+      background-color: color(white a(90%));
     }
   }
   & textarea {

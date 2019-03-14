@@ -10,7 +10,7 @@
 
   &__container {
     overflow: hidden;
-    background-color: google-color(brown, 900);
+    background-color: google-color(grey, 900);
     position: relative;
     z-index: 1;
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 // import CustomLink from '../CustomLink'
 import React from 'react'
-import { toggleMobileNav } from '../../helpers/helpers'
+import { toggleMobileNav, scrollUpDown } from '../../helpers/helpers'
 
 const MenuHeader = ({ siteTitle }) => (
   <StaticQuery
@@ -48,10 +48,11 @@ const MenuHeader = ({ siteTitle }) => (
                   {menuMain.map(({ node: item }) =>
                     item.data.navgroup.map((group, i) => (
                       <a
+                        onClick={toggleMobileNav}
                         key={i}
                         className="nav__item"
+                        data-scroll
                         href={`#${group.link.slug}`}
-                        data-scroll={`${group.link.slug}`}
                         title={`${group.label.text} ${
                           data.site.siteMetadata.title
                         }`}
@@ -69,6 +70,11 @@ const MenuHeader = ({ siteTitle }) => (
             <div className="nav__header__trigger-circle" />
             <div className="nav__header__trigger--inner" />
           </div>
+
+          <a className="nav__top-bottom__trigger" href="#">
+            <div className="nav__top-bottom__trigger-circle" />
+            <div className="nav__top-bottom__trigger--inner" />
+          </a>
         </nav>
       )
     }}
