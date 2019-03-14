@@ -1,0 +1,20 @@
+.product {
+  &__image {
+  }
+  &__title {
+  }
+  &__description {
+  }
+  &__stock {
+  }
+}
+.product__item {
+  &-loop {
+  }
+}
+.product__ticker {
+}
+.product__price {
+  &-sale {
+  }
+}

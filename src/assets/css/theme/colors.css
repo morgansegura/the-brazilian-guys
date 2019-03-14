@@ -1,0 +1,90 @@
+.btn:not(.btn__outline) {
+  &--cta {
+    background-color: $cta;
+  }
+}
+
+.btn__outline {
+  &--cta {
+    border-color: $cta;
+  }
+}
+
+.bg {
+  &--whitesmoke {
+    background-color: $whitesmoke;
+  }
+  &--gold {
+    background-color: $gold;
+  }
+  &--black {
+    background-color: black;
+  }
+  &--white {
+    background-color: white;
+  }
+  &--main-gray {
+    background-color: $main-gray;
+  }
+  &--green {
+    background-color: google-color(green, a400);
+  }
+  &--orange {
+    background-color: google-color(deeporange, a400);
+  }
+}
+.c {
+  &--whitesmoke {
+    color: $whitesmoke;
+  }
+  &--gold {
+    color: $gold;
+  }
+  &--white {
+    color: white;
+  }
+  &--black {
+    color: black;
+  }
+  &--main-white {
+    color: $main-white;
+  }
+  &--main-gray {
+    color: $main-gray;
+  }
+  &--green {
+    color: google-color(green, a400);
+  }
+  &--orange {
+    color: google-color(deeporange, a400);
+  }
+  &--gray-light {
+    color: google-color(grey, 500);
+  }
+}
+.border-color {
+  &--whitesmoke {
+    border-color: $whitesmoke;
+  }
+  &--gold {
+    border-color: $gold;
+  }
+  &--white {
+    border-color: white;
+  }
+  &--black {
+    border-color: black;
+  }
+  &--main-white {
+    border-color: $main-white;
+  }
+  &--main-gray {
+    border-color: $main-gray;
+  }
+  &--green {
+    border-color: google-color(green, a400);
+  }
+  &--orange {
+    border-color: google-color(deeporange, a400);
+  }
+}

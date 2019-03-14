@@ -1,0 +1,83 @@
+.bg__triangles {
+  z-index: 1;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-image: url('images/triangles.svg');
+  background-attachment: fixed;
+
+  @mixin atMedium {
+    /* padding-top: 60px; */
+    padding-bottom: 60px;
+
+    &::after {
+      content: ' ';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 10%;
+      width: 100%;
+      height: 100%;
+      background-color: google-color(amber, 50);
+      transform: skewX(-45deg);
+    }
+  }
+}
+
+.text {
+  /* position: absolute;
+  width: 450px;
+  left: 50%;
+  margin-left: -225px; */
+  /* height: 40px;
+  top: 50%;
+  margin-top: -20px; */
+
+  & h3 {
+    /* display: inline-block; */
+    vertical-align: top;
+    margin: 0;
+  }
+}
+.word {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  opacity: 0;
+  font-size: 36px !important;
+  transform: translate(-50%, 40%);
+
+  @mixin atSmall {
+    font-size: 50px;
+  }
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

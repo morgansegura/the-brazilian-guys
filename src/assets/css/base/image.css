@@ -1,0 +1,13 @@
+.img {
+  &--background {
+  }
+  &--fluid,
+  &-responsive {
+    display: block;
+    max-width: 100%;
+  }
+  &--border {
+    box-shadow: 0 0 2px color(black a(25%));
+    border: 15px solid white;
+  }
+}

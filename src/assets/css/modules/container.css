@@ -1,0 +1,243 @@
+.container {
+  position: relative;
+  /* overflow: hidden; */
+  width: 100%;
+  z-index: 1;
+  margin: 0 auto;
+  padding-right: $pad;
+  padding-left: $pad;
+
+  @mixin atSmallest {
+    max-width: $atSmall;
+  }
+  @mixin atSmall {
+    max-width: $atMedium;
+  }
+
+  @mixin atMedium {
+    max-width: $atLarge;
+  }
+
+  @mixin atLarge {
+    max-width: $atLargest;
+  }
+
+  &--xs {
+    max-width: $atSmallest;
+  }
+
+  &--sm {
+    max-width: $atSmall;
+  }
+
+  &--md {
+    max-width: $atMedium;
+  }
+
+  &--lg {
+    max-width: $atLarge;
+  }
+}
+
+/* Margin adjustments */
+/* prettier-ignore */
+.p {
+  @for $p from 0 to 200 {
+    &t-$(p) {
+      padding-top: $(p)px;
+    }
+    &b-$(p) {
+      padding-bottom: $(p)px;
+    }
+    &l-$(p) {
+      padding-left: $(p)px;
+    }
+    &r-$(p) {
+      padding-right: $(p)px;
+    }
+    &x-$(p) {
+      padding-left: $(p)px;
+      padding-right: $(p)px;
+    }
+    &y-$(p) {
+      padding-top: $(p)px;
+      padding-bottom: $(p)px;
+    }
+  }
+}
+/* prettier-ignore */
+.max {
+  @for $w from 1 to 100 {
+    &-$(w) {
+      max-width: $(w)%;
+    }
+  }
+}
+
+/* Margin adjustments */
+/* prettier-ignore */
+.m {
+  &-auto {
+    margin: 0 auto;
+  }
+  &l-auto {
+    margin-left: auto;
+  }
+  &r-auto {
+    margin-right: auto;
+  }
+  &t-auto {
+    margin-top: auto;
+  }
+  &b-auto {
+    margin-bottom: auto;
+  }
+  &x-auto {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &y-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  @for $m from 0 to 200 {
+    &t-$(m) {
+      margin-top: $(m)px;
+    }
+    &b-$(m) {
+      margin-bottom: $(m)px;
+    }
+    &l-$(m) {
+      margin-left: $(m)px;
+    }
+    &r-$(m) {
+      margin-right: $(m)px;
+    }
+    &x-$(m) {
+      margin-left: $(m)px;
+      margin-right: $(m)px;
+    }
+    &y-$(m) {
+      margin-top: $(m)px;
+      margin-bottom: $(m)px;
+    }
+/* prettier-ignore */
+    &t-minus-$(m) {
+      margin-top: -$(m)px;
+    }
+    &b-minus-$(m) {
+      margin-bottom: -$(m)px;
+    }
+    &l-minus-$(m) {
+      margin-left: -$(m)px;
+    }
+    &r-minus-$(m) {
+      margin-right: -$(m)px;
+    }
+    &x-minus-$(m) {
+      margin-left: -$(m)px;
+      margin-right: -$(m)px;
+    }
+    &y-minus-$(m) {
+      margin-top: -$(m)px;
+      margin-bottom: -$(m)px;
+    }
+  }
+}
+
+/* Custom adjust Boostrap4 column gap */
+/* prettier-ignore */
+.gap {
+  @for $gap from 1 to 30 {
+    &-$(gap) {
+      margin-left: -$(gap)px;
+      margin-right: -$(gap)px;
+      & .col,
+      & > [class^='col-'] {
+        padding-left: $(gap)px;
+        padding-right: $(gap)px;
+      }
+    }
+  }
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed__header {
+  padding-top: 100px;
+}
+
+.visible {
+  overflow: visible;
+  &-x {
+    overflow-x: visible;
+  }
+  &-y {
+    overflow-y: visible;
+  }
+}
+
+.vh {
+  @for $vh from 1 to 100 {
+    &-$(vh) {
+      /* prettier-ignore */
+      min-height: $(vh)vh;
+    }
+  }
+}
+.z {
+  @for $z from 1 to 10 {
+    &$(z) {
+      z-index: $(z);
+    }
+  }
+}
+
+/* prettier-ignore */
+.border {
+  @for $b from 0 to 20 {
+      &-t-$(b) {
+        border-top: solid $(b)px;
+      }
+      &-b-$(b) {
+        border-bottom: solid $(b)px;
+      }
+      &-l-$(b) {
+        border-left: solid $(b)px;
+      }
+      &-r-$(b) {
+        border-right: solid $(b)px;
+      }
+      &-x-$(b) {
+        border-left: solid $(b)px;
+        border-right: solid $(b)px;
+      }
+      &-y-$(b) {
+        border-top: solid $(b)px;
+        border-bottom: solid $(b)px;
+      }
+  }
+}
+/* prettier-ignore */
+.hr {
+  @for $num from 0 to 200 {
+      &-$(num) {
+        min-height: $(num)px;
+        width: 100%;
+      }
+  }
+}

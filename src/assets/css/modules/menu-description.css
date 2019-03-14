@@ -1,0 +1,66 @@
+.menu-section {
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+
+  @mixin atMedium {
+    /* padding-top: 60px;
+    padding-bottom: 60px; */
+  }
+}
+
+.menu-section__intro {
+  @mixin atMedium {
+    background-color: white;
+  }
+}
+.menu-section__description {
+  padding-top: 30px;
+
+  @mixin atMedium {
+    padding-top: 60px;
+  }
+  & .content__text {
+    padding-bottom: 30px;
+    @mixin atMedium {
+    }
+  }
+
+  @mixin atMedium {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+  }
+}
+.menu-section__image-block {
+  position: relative;
+
+  @mixin atMedium {
+  }
+}
+.food__img1,
+.food__img2,
+.food__img3,
+.food__img4 {
+  position: relative;
+  margin-bottom: 30px;
+
+  @mixin atMedium {
+  }
+}
+.food__img1 {
+  @mixin atMedium {
+  }
+}
+.food__img2 {
+  @mixin atMedium {
+  }
+}
+.food__img3 {
+  @mixin atMedium {
+  }
+}
+.food__img4 {
+  @mixin atMedium {
+  }
+}

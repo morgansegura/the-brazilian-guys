@@ -1,0 +1,85 @@
+.about-us {
+  position: relative;
+  z-index: 1;
+  /* overflow: hidden; */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* background: linear-gradient(
+    to right,
+    google-color(amber, 200),
+    google-color(amber, 100)
+  ); */
+  @mixin atMedium {
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+  &.bg__bottom-left {
+    &::before {
+      /* position: absolute;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      content: '';
+      width: 10%;
+      height: 120%;
+      background-size: cover;
+      background-image: url('images/triangles.svg');
+      background-attachment: fixed;
+      opacity: 0.3;
+      transform: rotate(-10deg);
+      background-color: google-color(amber, 100); */
+    }
+  }
+  &.bg__bottom-right {
+    &::after {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-image: url('images/triangles.svg');
+      background-attachment: fixed;
+      opacity: 0.1;
+      /* background-color: color(google-color(amber, 100) a(10%)); */
+    }
+  }
+}
+.content__box-image {
+  margin-bottom: 30px;
+  @mixin atSmall {
+    /* order: 2; */
+  }
+  @mixin atLarge {
+    margin-bottom: 0;
+  }
+}
+.content__box-text {
+  @mixin atSmall {
+    /* order: 1; */
+  }
+  @mixin atMedium {
+    /* order: 1; */
+  }
+}
+
+.more {
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @mixin atMedium {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__image-large {
+  }
+  &__image-small {
+  }
+  &__content {
+  }
+}

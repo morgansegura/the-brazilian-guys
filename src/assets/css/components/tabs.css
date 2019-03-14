@@ -1,0 +1,47 @@
+.tabs {
+  position: relative;
+  z-index: 2;
+  /* background: yellow; */
+}
+.tab-list {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 0;
+  /* background-color: yellow; */
+
+  @mixin atMedium {
+    padding-right: 15px;
+    justify-content: flex-end;
+  }
+}
+
+.tab-list-item {
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid color(black a(35%));
+  color: color(black a(35%));
+  cursor: pointer;
+  margin-right: 2px;
+
+  text-transform: uppercase;
+  font-family: $sans-secondary;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    color: black;
+    border-color: black;
+  }
+
+  @mixin atMedium {
+    font-size: 20px;
+  }
+}
+
+.tab-list-active {
+  color: black;
+  border-color: black;
+}
