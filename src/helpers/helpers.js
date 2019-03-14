@@ -126,33 +126,6 @@ export const animateText = inputWords => {
   setInterval(changeWord, 4000)
 }
 
-export const smoothScroll = parent => {
-  let offset = 0
-  let call
-  let target
-  const wrapper = document.getElementsByTagName('body')[0]
-
-  function scroll() {
-    if (offset - document.documentElement.scrollTop > 0) {
-      document.documentElement.scrollTop += 10
-    } else if (offset - document.documentElement.scrollTop < 0) {
-      document.documentElement.scrollTop -= 10
-    } else {
-      clearInterval(call)
-    }
-  }
-  // Add Event Listener to parent Element
-  document.querySelector(parent).addEventListener('click', reply_click)
-
-  //CallBack Function
-  function reply_click(e) {
-    e.preventDefault()
-    call = setInterval(scroll, 100)
-    target = e.srcElement.dataset.scroll
-    offset = document.getElementById(target).offsetTop
-  }
-}
-
 export const scrollUpDown = () => {
   let last_known_scroll_position = 0
   let ticking = false
