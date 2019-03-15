@@ -42,6 +42,12 @@ const Footer = ({ siteTitle }) => (
                     3085 Reynard Way, San Diego, CA 92103
                   </p>
                   <p className="phone">
+                    Email:{' '}
+                    <a href="mailto:thebrazilianguys@gmail.com">
+                      thebrazilianguys@gmail.com
+                    </a>
+                  </p>
+                  <p className="phone">
                     Phone: <a href="tel:1-619-905-7561">(619) 905-7561</a>
                   </p>
                 </div>
@@ -49,7 +55,7 @@ const Footer = ({ siteTitle }) => (
               <div className="col-12 col-lg-4">
                 <nav className="nav__footer">
                   <h3 className="heading">
-                    <span class="underline">Navigation</span>
+                    <span className="underline">Navigation</span>
                   </h3>
                   {!!menuMain ? (
                     <React.Fragment>
@@ -75,19 +81,34 @@ const Footer = ({ siteTitle }) => (
               <div className="col-12 col-lg-4">
                 <nav className="nav__footer">
                   <h3 className="heading">
-                    <span class="underline">Sponsored Links</span>
+                    <span className="underline">In the Media</span>
                   </h3>
-                  <a className="nav__item" href="https://google.com">
-                    Link one
+                  <a
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    title="As seen on The Food Network"
+                    className="nav__item"
+                    href="https://gay-sd.com/cast-iron-magic/"
+                  >
+                    The Food Network
                   </a>
-                  <a className="nav__item" href="https://google.com">
-                    Link two
+                  <a
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    title="As seen on San Diego Voyager"
+                    className="nav__item"
+                    href="https://gay-sd.com/cast-iron-magic/"
+                  >
+                    San Diego Voyager
                   </a>
-                  <a className="nav__item" href="https://google.com">
-                    Link 3
-                  </a>
-                  <a className="nav__item" href="https://google.com">
-                    Link four
+                  <a
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    title="As seen on Uptown News San Diego"
+                    className="nav__item"
+                    href="http://sdvoyager.com/interview/meet-ricardo-oriente-mendes-camilo-quadros-brazilian-guys-mission-hills/"
+                  >
+                    Uptown News San Diego
                   </a>
                 </nav>
               </div>

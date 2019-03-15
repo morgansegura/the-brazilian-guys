@@ -1,3 +1,26 @@
+.hero {
+  & .address__block {
+    border-top: 3px double color(black a(30%));
+    border-bottom: 3px double color(black a(30%));
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0 auto;
+    color: color(black a(50%));
+    max-width: 300px;
+    font-size: 18px;
+
+    & .address {
+    }
+    & .phone {
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
 .parallax__hero {
   overflow: hidden;
   /* overflow-x: hidden; */
@@ -6,7 +29,7 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   background-color: white;
 
@@ -146,6 +169,7 @@
   }
 }
 .parallax__hero-content {
+  width: 100%;
   & .headline__title {
   }
 
@@ -155,7 +179,7 @@
     font-weight: 800;
     color: color(black a(50%));
     text-align: center;
-    padding-top: 40px;
+    padding-top: 15px;
     font-size: 1.5rem;
     line-height: 1.4;
     font-family: $serif;
@@ -173,6 +197,7 @@
   font-size: 1rem;
   padding-left: 5px;
 }
+
 .logo {
   position: relative;
   z-index: 3;
@@ -181,6 +206,9 @@
   justify-content: center;
 
   &__circle {
+    background-image: url('images/logo-no-text.svg');
+    background-size: cover;
+    height: 280px;
     width: 280px;
     border-radius: 50%;
     background-color: white;

@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-// import PropTypes from 'prop-types'
-// import Plx from 'react-plx'
-import logoCircle from '../assets/images/logo-no-text.svg'
 import { animateText } from '../helpers/helpers'
 
 export default class Hero extends Component {
@@ -34,10 +31,7 @@ export default class Hero extends Component {
     }
   }
   componentDidMount() {
-    // console.log(this.state.copyArr[0].hashtag)
-    this.setState({
-      // textElem: document.getElementById('rotateText'),
-    })
+    this.setState({})
     animateText(
       document.getElementsByClassName('word'),
       document.createElement('span')
@@ -46,42 +40,11 @@ export default class Hero extends Component {
   componentDidUpdate() {}
 
   render() {
-    // const splitCopy = '#glutenfree'.split('')
-    // const spreadSplitText = [
-    //   {
-    //     start: 0,
-    //     end: 500,
-    //     properties: [
-    //       {
-    //         startValue: 0,
-    //         endValue: 100,
-    //         property: 'translateX',
-    //       },
-    //     ],
-    //   },
-    // ]
-    // const logoScale = [
-    //   {
-    //     start: 0,
-    //     end: 500,
-    //     properties: [
-    //       {
-    //         startValue: 0.5,
-    //         endValue: 3,
-    //         property: 'scale',
-    //       },
-    //     ],
-    //   },
-    // ]
     return (
-      <section id="home" className="parallax__hero bg__hero-text">
+      <section id="home" className="hero parallax__hero bg__hero-text">
         {/* Logo Block */}
         <div className="logo">
-          <img
-            className="logo__circle"
-            src={logoCircle}
-            alt="The Brazilian Guys founded 2015"
-          />
+          <div className="logo__circle" />
         </div>
 
         <div className="under__circle" />
@@ -96,34 +59,59 @@ export default class Hero extends Component {
                   href={word.link}
                   target="_blank"
                   rel="noreferrer noopener"
+                  className="word__link"
                 >
                   <span className="word">#{word.hashtag}</span>
                 </a>
               ))}
             </h3>
           </div>
-
           <p className="headline__subtitle">
             &nbsp;&nbsp;Home of the stuffed hashbrowns!{' '}
             <span className="copyright__icon">&copy;</span>
           </p>
+          <div className="address__block">
+            <p className="address">
+              <span className="overline">
+                3085 Reynard Way, San Diego, CA 92103
+              </span>
+            </p>
+            <p className="phone">
+              Email:{' '}
+              <a href="mailto:thebrazilianguys@gmail.com">
+                thebrazilianguys@gmail.com
+              </a>
+            </p>
+            <p className="phone">
+              <span className="underline">
+                Phone: <a href="tel:1-619-905-7561">(619) 905-7561</a>
+              </span>
+            </p>
+          </div>
+
           <div className="hero__social-media">
             <a
-              href="https://www.instagram.com/thebrazilianguys/"
+              title="Visit us on Facebook."
+              href="https://www.facebook.com/thebrazilianguys/"
               target="_blank"
               rel="noreferrer noopener"
             >
               <span className="iconify facebook" data-icon="mdi-facebook" />
             </a>
             <a
+              title="Visit us on Instagram."
               href="https://www.instagram.com/thebrazilianguys/"
               target="_blank"
               rel="noreferrer noopener"
             >
-              <span className="iconify instagram" data-icon="mdi-instagram" />
+              <span
+                className="iconify instagram"
+                data-icon="mdi-instagram"
+              />
             </a>
             <a
-              href="https://www.instagram.com/thebrazilianguys/"
+              title="Visit us on Yelp."
+              href="https://www.yelp.com/biz/the-brazilian-guys-san-diego?osq=the+brazilian+guys"
               target="_blank"
               rel="noreferrer noopener"
             >

@@ -40,20 +40,22 @@
     margin: 0;
   }
 }
-.word {
+.text {
+  position: relative;
+  /* max-width: 600px; */
+  display: block;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.word__link {
   position: absolute;
   left: 50%;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
+  transform: translateX(-50%);
+}
+.word {
   opacity: 0;
-  font-size: 36px !important;
-  transform: translate(-50%, 40%);
+  font-size: 36px;
 
   @mixin atSmall {
     font-size: 50px;

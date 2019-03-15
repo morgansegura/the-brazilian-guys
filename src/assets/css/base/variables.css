@@ -62,5 +62,5 @@ $base-font-weight: 400;
 $base-font-height: 1.7;
 $base-font-color: $main-gray;
 $base-font-color-light: $main-base-color-text;
-$base-bg-color: white;
+$base-bg-color: google-color(amber, 50);
 $base-transition: all 0.3s ease-out;
