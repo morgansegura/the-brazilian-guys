@@ -1,5 +1,5 @@
 // External Libs
-// import SmoothScroll from 'smooth-scroll'
+import SmoothScroll from 'smooth-scroll'
 
 export const toggleMobileNav = () => {
   const wrapper = document.getElementsByTagName('body')[0]
