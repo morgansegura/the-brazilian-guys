@@ -19,10 +19,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   &.mobile-nav--is-open {
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   &.mobile-nav--is-closed {
-    overflow: visible;
+    /* overflow: visible; */
   }
 }
 /* Body Structure */

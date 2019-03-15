@@ -16,10 +16,10 @@
 
   &--is-visible,
   .mobile-nav--is-open & {
-    opacity: 1;
+    /* opacity: 1;
     visibility: visible;
     z-index: 1001;
-    transition: opacity 0.4s ease-in;
+    transition: opacity 0.4s ease-in; */
     /* background-color: color(white a(95%)); */
   }
   &--not-visible,

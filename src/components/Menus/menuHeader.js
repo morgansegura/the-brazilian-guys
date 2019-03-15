@@ -2,9 +2,9 @@
 import PropTypes from 'prop-types'
 // import PreviewCompatibleImage from '../PreviewCompatibleImage'
 import { StaticQuery, graphql } from 'gatsby'
-// import CustomLink from '../CustomLink'
+import CustomLink from '../CustomLink'
 import React from 'react'
-import { toggleMobileNav, scrollUpDown } from '../../helpers/helpers'
+import { toggleMobileNav } from '../../helpers/helpers'
 
 const MenuHeader = ({ siteTitle }) => (
   <StaticQuery
@@ -21,15 +21,9 @@ const MenuHeader = ({ siteTitle }) => (
               data {
                 navgroup {
                   selectlinktype
-                  link {
-                    id
-                    slug
-                    target
-                    url
-                  }
-                  label {
-                    text
-                  }
+                  link
+                  label
+                  icon
                 }
               }
             }
@@ -47,34 +41,34 @@ const MenuHeader = ({ siteTitle }) => (
                 <div className="nav__primary col-12">
                   {menuMain.map(({ node: item }) =>
                     item.data.navgroup.map((group, i) => (
-                      <a
-                        onClick={toggleMobileNav}
-                        key={i}
+                      <CustomLink
+                        linkType={group.selectlinktype}
+                        linkURL={group.link}
                         className="nav__item"
-                        data-scroll
-                        href={`#${group.link.slug}`}
-                        title={`${group.label.text} ${
-                          data.site.siteMetadata.title
-                        }`}
+                        rel={`${group.label} - ${data.site.siteMetadata.title}`}
+                        key={i}
+                        onClick={toggleMobileNav}
                       >
-                        {group.label.text}
-                      </a>
+                        {group.label}
+                      </CustomLink>
                     ))
                   )}
                 </div>
               </React.Fragment>
             ) : null}
           </div>
-
+          {/*
+            {!!group.icon && group.icon !== 'undefined'
+              ? `<span className="iconify" data-icon=${
+                  group.icon
+                }></span>`
+              : null}{' '}
+          
+          */}
           <div className="nav__header__trigger" onClick={toggleMobileNav}>
             <div className="nav__header__trigger-circle" />
             <div className="nav__header__trigger--inner" />
           </div>
-
-          <a className="nav__top-bottom__trigger" href="#">
-            <div className="nav__top-bottom__trigger-circle" />
-            <div className="nav__top-bottom__trigger--inner" />
-          </a>
         </nav>
       )
     }}

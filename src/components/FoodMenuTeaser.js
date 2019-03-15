@@ -79,7 +79,7 @@ const FoodMenuTeaser = ({ data }) => (
     render={data => {
       const tabs = data.allPrismicTabs.edges
       return (
-        <Tabs id="stuffed-hashbrowns">
+        <Tabs>
           {!!tabs
             ? tabs.map(({ node: tab }) =>
                 tab.data.tabs.map((item, i) => (

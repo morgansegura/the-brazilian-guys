@@ -2,16 +2,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-export const CustomLink = ({ linkType, linkURL, children, className = '' }) => {
+export const CustomLink = ({
+  linkType,
+  linkURL,
+  rel = '',
+  title = '',
+  children,
+  className = '',
+}) => {
   if (linkType === 'internal') {
     return (
-      <Link className={className} to={linkURL}>
+      <Link rel={rel} title={title} className={className} to={linkURL}>
         {children}
       </Link>
     )
   } else {
     return (
-      <a className={className} href={linkURL}>
+      <a rel={rel} title={title} className={className} href={linkURL}>
         {children}
       </a>
     )
@@ -23,3 +30,5 @@ CustomLink.propTypes = {
 }
 
 export default CustomLink
+
+// <CustomLink linkType="internal" linkUrl="/#hastag" children, className="" />

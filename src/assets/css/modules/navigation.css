@@ -82,8 +82,8 @@
   .mobile-nav--is-open & {
     right: 0;
     transition: right 0.3s ease-out;
-    border-left: 1px solid google-color(grey, 300);
-    box-shadow: -5px 0 40px google-color(grey, 300);
+    border-left: 1px solid google-color(grey, 400);
+    box-shadow: -0.5rem 0 0 color(black a(10%));
     background: white;
   }
   .mobile-nav--is-closed & {

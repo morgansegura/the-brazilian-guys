@@ -3,7 +3,8 @@ require('dotenv').config({
 })
 
 const { meta: prismicSiteMetadata } = require('./src/helpers/siteMetadata')
-
+const { data } = prismicSiteMetadata
+console.log(prismicSiteMetadata)
 module.exports = {
   siteMetadata: {
     title: prismicSiteMetadata.title || '',

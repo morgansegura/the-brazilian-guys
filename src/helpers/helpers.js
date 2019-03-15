@@ -1,3 +1,6 @@
+// External Libs
+import SmoothScroll from 'smooth-scroll'
+
 export const toggleMobileNav = () => {
   const wrapper = document.getElementsByTagName('body')[0]
 
@@ -126,24 +129,31 @@ export const animateText = inputWords => {
   setInterval(changeWord, 4000)
 }
 
-export const scrollUpDown = () => {
-  let last_known_scroll_position = 0
-  let ticking = false
+export const smoothScroll = () => {
+  // const scroll = new SmoothScroll()
+  // const anchor = document.querySelector('a[href*="#"]')
+  // const toggle = document.querySelector('#toggle')
+  const scroll = new SmoothScroll('a[href*="#"]', {
+    ignore: '[data-scroll-ignore]',
+    header: null,
+    topOnEmptyHash: true,
 
-  function doSomething(scroll_pos) {
-    // Do something with the scroll position
-  }
+    // Speed & Duration
+    speed: 500,
+    speedAsDuration: false,
+    durationMax: null,
+    durationMin: null,
+    clip: true,
 
-  window.addEventListener('scroll', function(e) {
-    last_known_scroll_position = window.scrollY
+    easing: 'easeInOutCubic',
+    customEasing: function(time) {
+      return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time
+    },
+    updateURL: false, // Update the URL on scroll
+    popstate: false,
 
-    if (!ticking) {
-      window.requestAnimationFrame(function() {
-        doSomething(last_known_scroll_position)
-        ticking = false
-      })
-
-      ticking = true
-    }
+    // Custom Events
+    emitEvents: true, // Emit custom events
   })
+  return scroll
 }

@@ -157,7 +157,7 @@ const About = ({ data }) => (
                         </div>
 
                         {/* Locations Widget */}
-                        <div className="location__widget col-12 mt-30">
+                        <div id="our-locations" className="location__widget col-12 mt-30">
                           <div className="row no-gutters">
                             <div className="col-12">
                               <h3 className="headline__title headline__title--reverse headline__title--full uppercase t-center">

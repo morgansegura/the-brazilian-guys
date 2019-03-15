@@ -74,7 +74,7 @@ export default class Hero extends Component {
     //   },
     // ]
     return (
-      <section id="hero" className="parallax__hero bg__hero-text">
+      <section id="home" className="parallax__hero bg__hero-text">
         {/* Logo Block */}
         <div className="logo">
           <img
