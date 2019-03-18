@@ -19,19 +19,23 @@ exports.createPages = async ({ graphql, actions }) => {
   const siteMetadata = await graphql(`
     {
       prismicSiteMetadata {
-        edges {
-          node {
-            title
-            short_name
-            keywords
-            description
-            copyright
-            conanical_url
-            author {
-              name
-              minibio
+        data {
+          title
+          siteurl
+          shortname
+          keywords
+          description
+          copyright
+          rssfeed
+          fbappid
+          instagramid
+          googleanalyticsid
+          icon {
+            localFile {
+              publicURL
+              id
+              relativePath
             }
-            siteURL
           }
         }
       }

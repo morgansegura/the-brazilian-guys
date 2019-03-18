@@ -2,9 +2,10 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const { meta: prismicSiteMetadata } = require('./src/helpers/siteMetadata')
-const { data } = prismicSiteMetadata
-console.log(prismicSiteMetadata)
+const prismicSiteMetadata = require('./src/helpers/siteMetadata')
+
+// console.log(siteData)
+
 module.exports = {
   siteMetadata: {
     title: prismicSiteMetadata.title || '',
